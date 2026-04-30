@@ -1,0 +1,129 @@
+# Dados revisados para o cenario solicitado
+
+param delta_t := 1;
+param operational_days_equivalent := 365;
+param use_article_like_objective := 1;
+
+# Parametros de anualizacao para versao mais proxima do artigo
+# CRF tipico para horizonte de longo prazo (exemplo simplificado)
+param crf_pv := 0.10;
+param crf_bess := 0.12;
+param crf_trafo := 0.08;
+
+# O&M anual por capacidade instalada (BRL/ano)
+param om_pv_kw_year := 30;
+param om_bess_kwh_year := 25;
+param om_trafo_kw_year := 20;
+
+# Receita de recarga VE (BRL/kWh)
+param tariff_ev := 1.60;
+
+# Fator de remuneracao da energia exportada para a rede
+# Cenario base chines: venda para a rede proibida
+param export_price_factor := 0.70;
+param allow_grid_export := 0;
+
+# CAPEX unitario
+param capex_pv_kw := 1200;
+param capex_bess_kwh := 700;
+param capex_trafo_kw := 1000;
+
+# BESS (Tabela S.1 - Source)
+param eta_charge := 0.91;
+param eta_discharge := 0.91;
+param soc_min_frac := 0.05;
+param soc_max_frac := 0.95;
+param soc_initial_frac := 0.50;
+param c_rate_charge := 1.00;
+param c_rate_discharge := 1.00;
+
+# Limites superiores de capacidade instalada (realistas para eletroposto rodoviario)
+param E_bess_cap_max := 2000;
+param P_pv_cap_max := 1000;
+param P_trafo_cap_max := 500;
+
+# Irradiancia normalizada
+param irradiance_cf :=
+1  0.00
+2  0.00
+3  0.00
+4  0.00
+5  0.10
+6  0.30
+7  0.50
+8  0.70
+9  0.90
+10 1.00
+11 0.95
+12 0.90
+13 0.85
+14 0.80
+15 0.70
+16 0.50
+17 0.30
+18 0.10
+19 0.00
+20 0.00
+21 0.00
+22 0.00
+23 0.00
+24 0.00
+;
+
+# Preco horario de energia da rede (BRL/kWh)
+# TOU com janela de ponta para induzir arbitragem do BESS
+param grid_price :=
+1  0.25
+2  0.25
+3  0.25
+4  0.25
+5  0.25
+6  0.25
+7  0.54
+8  0.88
+9  0.88
+10 0.88
+11 0.88
+12 0.54
+13 0.54
+14 0.54
+15 0.54
+16 0.54
+17 0.88
+18 1.10
+19 1.10
+20 1.10
+21 0.88
+22 0.54
+23 0.25
+24 0.25
+;
+
+# Demanda de recarga VE (kW medio por hora)
+# Perfil comercial chines de referencia
+param P_ev_load_kw :=
+1  35
+2  28
+3  22
+4  20
+5  25
+6  48
+7  72
+8  98
+9  105
+10 115
+11 110
+12 100
+13 95
+14 90
+15 98
+16 112
+17 126
+18 135
+19 128
+20 116
+21 94
+22 72
+23 54
+24 42
+;
