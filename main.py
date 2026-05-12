@@ -482,7 +482,7 @@ def generate_figures(instance, output_dir: Path) -> None:
 
     # 1) Demanda eletrica veicular (grafico separado).
     plt.figure(figsize=(12, 6))
-    plt.plot(T, P_ev_load_kw, label="Demanda Eletrica Veicular (kW)", color="tab:blue")
+    plt.bar(T, P_ev_load_kw, label="Demanda Eletrica Veicular (kW)", color="tab:blue")
     plt.xlabel("Hora")
     plt.ylabel("Potencia (kW)")
     plt.title("Perfil de Demanda Eletrica Veicular")
@@ -490,6 +490,7 @@ def generate_figures(instance, output_dir: Path) -> None:
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
+    plt.ylim(bottom=0)
     plt.savefig(output_dir / "fig_01_demanda_ev.png", dpi=150)
     plt.show()
     plt.close()
