@@ -1,127 +1,154 @@
-# Índice Mestre — Projeto de Mestrado: Eletropostos, Microrredes e Otimização
+# Índice Mestre — Projeto de Mestrado: Eletropostos, Microrredes, MILP e Modelos de Negócio
 
-Este documento consolida, por rastreabilidade, os repositórios de `leticiasdrummond` identificados como diretamente ou potencialmente relacionados ao desenvolvimento do projeto de mestrado. A consolidação preserva a origem de cada artefato: os repositórios originais não são apagados nem substituídos.
+Atualizado em 12/08/2026.
 
-## 1. Repositório central
+Este documento consolida, por rastreabilidade, os repositórios de `leticiasdrummond` identificados no GitHub como diretamente, potencialmente ou metodologicamente relacionados ao desenvolvimento do projeto de mestrado. Os repositórios originais permanecem como fontes históricas; não devem ser apagados nem sobrescritos silenciosamente.
 
-- `EVCS-PV-BESS` — modelo MILP/Pyomo para EVCS + PV + BESS + rede/transformador; código funcional, instâncias, dicionários, notebook e protocolo de rastreabilidade.
-- https://github.com/leticiasdrummond/EVCS-PV-BESS
+## 1. Repositório central de reprodutibilidade
+
+### `EVCS-PV-BESS`
+
+Modelo central de otimização para EVCS/eletroposto com PV+BESS+rede/transformador. Deve funcionar progressivamente como ponto de entrada da pesquisa, preservando formulação, código, instâncias, resultados e documentação.
+
+https://github.com/leticiasdrummond/EVCS-PV-BESS
 
 ## 2. Repositórios diretamente relacionados ao modelo de eletroposto
 
-### 2.1 `Modelo-de-Eletroposto---Casos-Base`
+### `Modelo-de-Eletroposto---Casos-Base`
 
-Repositório privado identificado como diretamente relacionado à modelagem e documentação do eletroposto.
+Repositório privado diretamente relacionado à formulação e documentação do eletroposto.
 
-Conteúdos identificados:
+Conteúdos identificados anteriormente:
 
 - `Otimizacao.tex` — formulação/documentação de otimização;
 - `Modelagem_pepilane.tex` — modelagem matemática;
-- `Caso_2_MIN_Pgrid_t.tex` — rascunho de formulação;
+- `Caso_2_MIN_Pgrid_t.tex` — formulação de caso;
 - `Notas_reuniao.tex` — registro de desenvolvimento;
 - `Atividade2_Economia_de_Energia.ipynb`;
 - `Anexo 1 - Relatório Q.2.pdf`;
 - `main.tex`;
-- template de dissertação/trabalho acadêmico da UNICAMP.
+- template acadêmico UNICAMP.
 
-Origem: https://github.com/leticiasdrummond/Modelo-de-Eletroposto---Casos-Base
+https://github.com/leticiasdrummond/Modelo-de-Eletroposto---Casos-Base
 
-### 2.2 `cenariosEVCS`
+### `cenariosEVCS`
 
-Repositório de cenários, subprogramas, relatórios e resultados de simulações.
+Repositório experimental de cenários, subprogramas, relatórios e resultados.
 
-Conteúdos relevantes identificados:
+Conteúdos relevantes:
 
 - `2_3subprogramas.py`;
-- `2.2 MAPA_SUBPROGRAMAS.md`;
-- `2.README_subprogramas.md`;
+- mapas e READMEs de subprogramas;
 - cenários de rede pura;
 - cenários com transformador + PV + BESS;
 - cenários com e sem exportação;
 - relatórios textuais;
-- arquivos `resultados.json`;
+- `resultados.json`;
 - figuras de simulação.
 
-Origem: https://github.com/leticiasdrummond/cenariosEVCS
+https://github.com/leticiasdrummond/cenariosEVCS
 
-### 2.3 `Artigo-renov-veis-bess-eletroposto`
+### `Artigo-renov-veis-bess-eletroposto`
 
-Repositório associado ao desenvolvimento científico, análise econômica e resultados para integração de renováveis/BESS/eletropostos.
+Repositório associado ao desenvolvimento científico, análise econômica e resultados de integração de renováveis/BESS/eletropostos.
 
 Conteúdos identificados:
 
 - notebooks de otimização;
 - análise econômica;
-- análise de usinas GN/PV;
+- estudo GN/PV;
 - configuração IEEE;
 - dados de carregadores;
-- séries temporais de solução;
+- séries temporais;
 - fluxo da rede;
 - SOC;
 - operação;
-- arquivos CSV de resultados.
+- CSVs de resultados.
 
-Origem: https://github.com/leticiasdrummond/Artigo-renov-veis-bess-eletroposto
+https://github.com/leticiasdrummond/Artigo-renov-veis-bess-eletroposto
 
-### 2.4 `Testes-de-Simula-es--Artigo`
+### `Testes-de-Simula-es--Artigo`
 
-Repositório identificado como parte do conjunto de testes de simulação utilizado no desenvolvimento do artigo/modelo.
+Repositório de testes de simulação associado ao desenvolvimento do artigo/modelo.
 
-Origem: https://github.com/leticiasdrummond/Testes-de-Simula-es--Artigo
+https://github.com/leticiasdrummond/Testes-de-Simula-es--Artigo
 
-## 3. Repositórios de apoio à modelagem/otimização
+## 3. Novo repositório identificado — modelos de negócio e MILP
 
-### 3.1 `Gurobi`
+### `modelos-de-neg-cio-com-problema-milp`
 
-Repositório de apoio relacionado ao solver Gurobi e experimentos/integrações de otimização.
+Repositório privado identificado no inventário atualizado do GitHub em 12/08/2026. Pelo próprio nome e pelo contexto do projeto, deve ser tratado como candidato prioritário para auditoria e incorporação histórica, pois conecta duas dimensões que se tornaram centrais na dissertação: **modelos de negócio** e **problemas MILP**.
 
-Origem: https://github.com/leticiasdrummond/Gurobi
+https://github.com/leticiasdrummond/modelos-de-neg-cio-com-problema-milp
 
-### 3.2 `PyPSA`
+Status atual: `identificado — ainda não auditado em profundidade`.
 
-Repositório associado ao estudo/uso da plataforma PyPSA para sistemas de energia.
+Próxima ação: inventariar arquivos, formulações, instâncias, notebooks, resultados e commits; identificar quais elementos pertencem ao problema de eletropostos/microrredes e quais são apenas exercícios/metodologia.
 
-Origem: https://github.com/leticiasdrummond/PyPSA
+## 4. Repositórios de apoio à modelagem/otimização
 
-### 3.3 `Gurobi_Exemple_Events`
+### `Gurobi`
 
-Repositório de exemplos de eventos/uso do Gurobi.
+Repositório de apoio relacionado ao solver Gurobi e experimentos de otimização.
 
-Origem: https://github.com/leticiasdrummond/Gurobi_Exemple_Events
+https://github.com/leticiasdrummond/Gurobi
 
-### 3.4 `https-github.com-ampl-colab.ampl.com`
+### `PyPSA`
 
-Repositório associado a experimentação/documentação com AMPL/Colab, potencialmente relevante para histórico de métodos de otimização.
+Repositório associado ao estudo/uso de PyPSA em sistemas de energia.
 
-Origem: https://github.com/leticiasdrummond/https-github.com-ampl-colab.ampl.com
+https://github.com/leticiasdrummond/PyPSA
 
-## 4. Repositórios de apoio acadêmico/dados
+### `Gurobi_Exemple_Events`
 
-### 4.1 `epe4md`
+Repositório de exemplos/experimentação com Gurobi.
 
-Repositório relacionado ao material EPE utilizado no contexto acadêmico e de pesquisa.
+https://github.com/leticiasdrummond/Gurobi_Exemple_Events
 
-Origem: https://github.com/leticiasdrummond/epe4md
+### `https-github.com-ampl-colab.ampl.com`
 
-### 4.2 `Modelos-Base`
+Repositório associado à experimentação/documentação AMPL/Colab, potencialmente relevante para o histórico metodológico de otimização.
 
-Repositório de modelos-base. Deve ser mantido como fonte histórica e auditado antes de qualquer classificação definitiva como parte do modelo principal.
+https://github.com/leticiasdrummond/https-github.com-ampl-colab.ampl.com
 
-Origem: https://github.com/leticiasdrummond/Modelos-Base
+## 5. Repositórios de apoio acadêmico/dados
 
-### 4.3 `Notebooks_IT306`
+### `epe4md`
 
-Coleção de notebooks acadêmicos. Deve ser pesquisada por termos e dependências antes de incorporar qualquer conteúdo ao modelo principal.
+Material relacionado à EPE utilizado no contexto acadêmico/pesquisa.
 
-Origem: https://github.com/leticiasdrummond/Notebooks_IT306
+https://github.com/leticiasdrummond/epe4md
 
-## 5. Repositórios não incorporados automaticamente ao modelo principal
+### `Modelos-Base`
 
-`Terada`, `Mario-Levorato-Rosa-Figueiredo-Yuri-Frota`, `teste1` e outros repositórios pessoais não foram classificados automaticamente como parte do mestrado apenas pelo nome. A ausência nesta seção de classificação principal não significa que sejam irrelevantes; significa apenas que não há evidência suficiente, nesta etapa, para misturar seu conteúdo ao modelo científico.
+Repositório de modelos-base. Deve ser auditado antes de classificar conteúdos específicos como parte do modelo principal.
 
-## 6. Regra de incorporação
+https://github.com/leticiasdrummond/Modelos-Base
 
-O repositório central `EVCS-PV-BESS` deve funcionar como índice e, progressivamente, como arquivo de reprodução. Para cada artefato incorporado, registrar:
+### `Notebooks_IT306`
+
+Coleção de notebooks acadêmicos. Deve ser pesquisada por termos, dependências e histórico antes de incorporar conteúdo ao modelo principal.
+
+https://github.com/leticiasdrummond/Notebooks_IT306
+
+## 6. Repositórios identificados, mas sem evidência suficiente para classificação como parte do mestrado
+
+- `Terada`
+- `Mario-Levorato-Rosa-Figueiredo-Yuri-Frota`
+- `teste1`
+- `REGISTROS`
+
+A presença nesta categoria não significa irrelevância; significa apenas que o nome/metadado disponível não é evidência suficiente para misturar seu conteúdo ao acervo científico do mestrado.
+
+## 7. Inventário atual do GitHub
+
+A conta `leticiasdrummond` apresentou, na atualização de 12/08/2026, os seguintes repositórios acessíveis: `teste1`, `epe4md`, `Notebooks_IT306`, `Gurobi_Exemple_Events`, `Terada`, `Modelos-Base`, `Mario-Levorato-Rosa-Figueiredo-Yuri-Frota`, `REGISTROS`, `Gurobi`, `https-github.com-ampl-colab.ampl.com`, `PyPSA`, `Testes-de-Simula-es--Artigo`, `EVCS-PV-BESS`, `cenariosEVCS`, `Modelo-de-Eletroposto---Casos-Base`, `Artigo-renov-veis-bess-eletroposto` e `modelos-de-neg-cio-com-problema-milp`.
+
+A classificação temática acima é deliberadamente mais restritiva que o inventário total.
+
+## 8. Regra de incorporação
+
+Para cada artefato que for efetivamente incorporado ao acervo central, registrar:
 
 1. repositório de origem;
 2. caminho original;
@@ -133,12 +160,12 @@ O repositório central `EVCS-PV-BESS` deve funcionar como índice e, progressiva
 8. resultado produzido, quando houver;
 9. status: `histórico`, `validado`, `reproduzível` ou `descartado`.
 
-## 7. Regra científica
+## 9. Regra científica
 
-Nenhum resultado histórico deve ser sobrescrito silenciosamente. Se uma nova versão do modelo reproduzir ou modificar um resultado antigo, ambos devem permanecer identificáveis, com a diferença documentada.
+Nenhum resultado histórico deve ser sobrescrito silenciosamente. Se uma nova versão do modelo reproduzir, corrigir ou modificar um resultado antigo, ambas as versões devem permanecer identificáveis, com a diferença documentada.
 
-## 8. Cadeia de rastreabilidade
+## 10. Cadeia de rastreabilidade
 
 `referência/hipótese -> parâmetro -> instância -> formulação -> código -> commit -> execução -> resultado -> figura/tabela -> seção da dissertação`.
 
-Esta estrutura permite que os repositórios originais continuem sendo a fonte histórica, enquanto `EVCS-PV-BESS` passa a funcionar como ponto de entrada organizado para a reprodução do projeto.
+O objetivo é transformar o GitHub em um **registro científico reprodutível da evolução do mestrado**, e não apenas em um depósito de códigos.
